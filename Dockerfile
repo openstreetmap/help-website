@@ -10,7 +10,7 @@ RUN hugo build \
         --cleanDestinationDir \
         --config /src/config.toml
 
-RUN find /src/public -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.xml' -o -name '*.json' -o -name '*.svg' -o -name '*.txt' \) -print0 | xargs -0 -P4 -n32 gzip --best -kf
+RUN find /src/public -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.xml' -o -name '*.json' -o -name '*.svg' -o -name '*.txt' \) -print0 | xargs -0 -P4 -n32 --no-run-if-empty gzip --best -kf
 
 # ---------------------------------------------------
 
