@@ -1,4 +1,4 @@
-FROM docker.io/hugomods/hugo:debian-base-0.147.8@sha256:9a4344c6db750e7d4114cece2b391c3fa49d213da02d090a9a8f63e30c215cac AS hugo
+FROM ghcr.io/hugomods/hugo:debian-base-0.147.8@sha256:9a4344c6db750e7d4114cece2b391c3fa49d213da02d090a9a8f63e30c215cac AS hugo
 
 COPY site /src
 
