@@ -1,4 +1,4 @@
-FROM ghcr.io/hugomods/hugo:debian-base-0.154.2@sha256:7af8bc97ba34cf865c96230efa5ed89ebb59ee229c93d873ab0da541d5180a39 AS hugo
+FROM ghcr.io/hugomods/hugo:debian-base-0.156.0@sha256:452f837278193ce88ddd7dafe820373b41563e7ea428b1fa76de2f14aec946d1 AS hugo
 
 COPY site /src
 
